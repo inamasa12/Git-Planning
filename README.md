@@ -21,7 +21,7 @@ User直下にGit管理の学習フォルダ`learning`を作成し、`$ git init`
 `$ git add ファイル名`  
 `$ git add -A`  
 1. 新規もしくは修正をコミット  
-`$ git commit -m "コメント"` 
+`$ git commit -m "コメント"`  
 -m: コメントオプション  
 1. リモートレポジトリに変更を反映  
 `$ git push origin master`  
