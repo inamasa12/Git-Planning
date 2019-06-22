@@ -29,7 +29,7 @@ User直下にGit管理の学習フォルダ`learning`を作成し、`$ git init`
 ## その他Gitコマンド
 * 作業フォルダの状態確認  
 `$ git status`  
-* リモートレポジトリのURL確認  
+* 作業フォルダに設定されているリモートレポジトリのURL確認  
 `$ git remote -v`  
 
   
