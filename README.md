@@ -26,4 +26,7 @@ User直下にGit管理の学習フォルダ`learning`を作成し、`$ git init`
 1. リモートレポジトリに変更を反映  
 `$ git push origin master`  
 
+## その他Gitコマンド
+*作業フォルダの確認  
+`$ git status`
   
