@@ -27,6 +27,9 @@ User直下にGit管理の学習フォルダ`learning`を作成し、`$ git init`
 `$ git push origin master`  
 
 ## その他Gitコマンド
-*作業フォルダの確認  
-`$ git status`
+* 作業フォルダの状態確認  
+`$ git status`  
+* リモートレポジトリのURL確認  
+`$ git remote -v`  
+
   
