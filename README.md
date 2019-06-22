@@ -33,3 +33,5 @@ User直下にGit管理の学習フォルダ`learning`を作成し、`$ git init`
 `$ git remote -v`  
 
   
+## 参考サイト
+[GitのHEADとは何者なのか](https://qiita.com/ymzk-jp/items/00ff664da60c37458aaa)
