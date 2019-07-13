@@ -36,6 +36,22 @@ User直下にGit管理の学習フォルダ`learning`を作成し、`$ git init`
 * 作業フォルダに設定されているリモートレポジトリのURL確認  
 `$ git remote -v`  
 
-  
 ## 参考サイト
-[GitのHEADとは何者なのか](https://qiita.com/ymzk-jp/items/00ff664da60c37458aaa)
+- Git  
+  [GitのHEADとは何者なのか](https://qiita.com/ymzk-jp/items/00ff664da60c37458aaa)
+- Markdown記法全般  
+  [Markdown記法 サンプル集](https://qiita.com/tbpgr/items/989c6badefff69377da7)  
+  [Markdown記法 チートシート](https://gist.github.com/mignonstyle/083c9e1651d7734f84c99b8cf49d57fa)  
+- 数式  
+  [GithubのREADMEとかwikiで数式を書く](http://idken.net/posts/2017-02-28-math_github/)  
+  [よく忘れるので数学のTeX記法をまとめ](https://qiita.com/shepabashi/items/27b7284d1f0007af533b)  
+  [LaTeXコマンド集](http://www.latex-cmd.com/)  
+- 画像  
+  [GitHubに画像ファイルを保存してREADME.mdで表示する方法](https://www.pupha.net/archives/1632/)  
+
+# その他
+## コマンドライン（Windows）
+テキストエディタの起動:  
+  `$ notepad ファイル名`  
+ファイル内容の表示:  
+  `$ type ファイル名`
