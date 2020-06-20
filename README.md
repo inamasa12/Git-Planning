@@ -2,8 +2,8 @@
 Gitの利用方法
 
 ## 学習環境の設定
-User直下にGit管理の学習フォルダ`learning`を作成し、`$ git init`  
-⇒　特定のレポジトリに紐づかないGit環境の作成  
+インストール後、user.nameとuser.emailを登録  
+`git config --global user.name ～` and `git config --global user.email ～`
 
 - 学習対象がGitHub上にレポジトリを有する場合  
   当該レポジトリをフォーク`Fork`  
