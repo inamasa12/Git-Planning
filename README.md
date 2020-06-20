@@ -3,7 +3,7 @@ Gitの利用方法
 
 ## 学習環境の設定
 インストール後、user.nameとuser.emailを登録  
-`git config --global user.name ～` and `git config --global user.email ～`
+`git config --global user.name "～"` and `git config --global user.email ～`
 
 - 学習対象がGitHub上にレポジトリを有する場合  
   当該レポジトリをフォーク`Fork`  
