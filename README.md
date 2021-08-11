@@ -48,7 +48,9 @@ Gitの利用方法
   [LaTeXコマンド集](http://www.latex-cmd.com/)  
 - 画像  
   [GitHubに画像ファイルを保存してREADME.mdで表示する方法](https://www.pupha.net/archives/1632/)  
-  [【GitHub】README.md に画像を表示させる簡単な方法](https://qiita.com/ROY_M/items/2c4feb5de05535441bc8)  
+  [GitHub/README.md に画像を表示させる簡単な方法](https://qiita.com/ROY_M/items/2c4feb5de05535441bc8)  
+
+
 
 # その他
 ## コマンドライン（Windows）
