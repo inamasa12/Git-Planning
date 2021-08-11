@@ -50,6 +50,7 @@ Gitの利用方法
   [GitHubに画像ファイルを保存してREADME.mdで表示する方法](https://www.pupha.net/archives/1632/)  
   [GitHub/README.md に画像を表示させる簡単な方法](https://qiita.com/ROY_M/items/2c4feb5de05535441bc8)  
 
+![myplot](https://user-images.githubusercontent.com/51372161/129022763-34be4463-dc02-4542-95df-57601609d4dc.png)
 
 
 # その他
