@@ -1,44 +1,142 @@
-# Git-Planning
-Gitの利用方法
+# Git-Planning  
 
-## 学習環境の設定
-インストール後、user.nameとuser.emailを登録  
-`git config --global user.name "～"` and `git config --global user.email ～`
+## Git操作
 
-- 学習対象がGitHub上にレポジトリを有する場合  
-  当該レポジトリをフォーク`Fork`  
-  フォークしたレポジトリをローカルの学習用フォルダ`learning`にクローン  
-  `$ git clone 対象のURL`  
-  作成されたフォルダを学習対象に関するGitの作業フォルダにする
-- 学習対象がGitHub上にレポジトリを有しない場合  
-  GitHub上に新しい学習用のレポジトリを作成  
-  作成したレポジトリをローカルの学習用フォルダ`learning`にクローン  
-  `$ git clone 対象のURL`  
-  作成されたフォルダを学習対象に関するGitの作業フォルダにする  
+- フォーク
+異なるアカウントのレポジトリをコピーする
 
-## リモートレポジトリの更新
-1. ローカルリポジトリのインデックスに新規もしくは修正したファイルをステージング    
-`$ git add ファイル名`  
-`$ git add -A`  
-1. 新規もしくは修正をコミット  
-`$ git commit -m "コメント"`  
--m: コメントオプション  
-1. リモートレポジトリに変更を反映  
-`$ git push origin master`  
+- クローン  
+リモートレポジトリをローカルにコピーする  
+`git clone repo_A(SSH)`:  
+リモートレポジトリrepo_Aをローカルに取得  
 
-## ローカルレポジトリの更新
-とりあえず下記で問題なさそう  
-`$ git pull`  
+- アド
+変更をステージングエリアに登録する  
 
-## その他Gitコマンド
-* 作業フォルダの状態確認  
-`$ git status`  
-* 作業フォルダに設定されているリモートレポジトリのURL確認  
-`$ git remote -v`  
+- コミット  
+変更を確定させる  
 
+- プッシュ  
+ローカルブランチをリモートにコピーする  
+`git push origin branch_A`:  
+　ローカルのbranch_Aブランチをリモートレポジトリoriginにコピー  
+
+- プルリクエスト  
+ブランチのマージを目的に変更のレビューを依頼する  
+
+- マージ  
+異なるブランチを同期する  
+異なるブランチで行った変更を目的のブランチに反映させる
+
+- フェッチ  
+リモートブランチの状態を記録する「リモート追跡ブランチ」を最新の状態に更新する  
+全てのブランチが対象  
+`git fetch origin`:  
+　リモートレポジトリoriginに関する全てのリモート追跡ブランチを更新  
+
+- プル  
+フェッチとマージを続けて行い、ローカルブランチをリモートブランチと同じ状態にする  
+`git pull origin master`:  
+　ローカルのmasterブランチをリモートレポジトリoriginのmasterブランチに同期  
+　※）処理の前に更新対象のブランチに移動しておく必要がある  
+
+- プルリクエスト  
+変更のレビューを依頼すること  
+
+
+---
+## Gitコマンド
+- git init  
+ローカルレポジトリを作る
+
+- git status  
+ファイルの更新状態を確認  
+- git diff  
+ファイルとステージングエリアの差分を確認  
+- git diff --cached  
+ステージングエリアと前回コミットの差分を確認  
+- git diff branch_A  
+作業ブランチとbranch_Aの差分を表示  
+- git log (-p)  
+コミット履歴を確認  
+pオプションで各コミットの差分も表示  
+- git remote -v  
+リモートレポジトリの設定を確認  
+
+- git branch  
+作業ブランチを確認  
+- git branch branch_A  
+branch_Aを作成  
+- git branch -d branch_A  
+ローカルのbranch_Aを削除  
+
+- git checkout branch_A (git switch)  
+作業ブランチをbranch_Aに移動  
+当該ブランチがリモート追跡ブランチにあって作業ブランチにない場合は、リモートのブランチがコピーされる  
+- git checkout -b branch_A  
+ブランチの作成と当該ブランチへの移動を同時に行う  
+- git checkout -- file_A (git restore)  
+file_Aへのコミットを取り消す  
+本来的にはfile_Aをステージングの状態に戻す操作  
+- git reset HEAD file_A (git restore)
+ステージングエリアへの登録を取り消す  
+本来的にはステージングエリアを最新のコミットの状態に戻す  
+
+- git add file_A  
+file_Aの変更をステージングエリアに登録  
+- git add -A  
+レポジトリ内の変更をまとめてステージングエリアに登録  
+- git commit -m "COMMENT"  
+ステージングエリアの登録をコミット  
+- git commit -am "COMMENT"  
+ステージングとコミットを連続して行う  
+
+- git rm file_A  
+file_Aファイルを削除して、変更をステージングエリアに登録（コミットはしない）  
+- git rm -r dir_A
+dir_Aディレクトリを削除して、変更をステージングエリアに登録（コミットはしない）  
+
+- git merge branch_A  
+カレントのブランチにbranch_Aの状態を反映させる  
+
+
+---
+## Gitの大まかな流れ  
+リモートはGitHubを前提  
+1. ローカルレポジトリの作成  
+    1. 既存のプロジェクト（レポジトリ）が存在する  
+    ① GitHub上で対象のプロジェクトをフォーク  
+    ② フォークしたレポジトリをローカルにクローン  
+    　　`git clone repo_A(SSH)`  
+    1. 新しくプロジェクトを立ち上げる  
+    ① GitHub上にレポジトリを作成  
+    ② ローカルにレポジトリと同名のフォルダを作成  
+    ③ 当該フォルダでレポジトリを設定  
+    　　`git init`  
+    ④ リモートレポジトリを紐づけ  
+    　　`git remote add repo_A(SSH)`  
+1. ローカルでのファイル変更  
+1. 変更のステージング  
+　`git add file_A`
+1. 変更のコミット  
+　`git commit -m "COMMENT"`
+1. 変更のプッシュ  
+　`git push origin master`
+
+
+---
+## 用語  
+- master (main)  
+レポジトリで最初に自動作成されるブランチ  
+- origin  
+コピー（クローン）元のリモートレポジトリ  
+- HEAD  
+作業対象ブランチの最新のコミットへのポインタ  
+- 3種類のマージ  
+マージコミット: トピックブランチのコミットを全て維持する  
+スカッシュ: トピックブランチのコミットはまとめる    
+リベース: 全てのコミットを直列させる  
 ## 参考サイト
-- Git  
-  [GitのHEADとは何者なのか](https://qiita.com/ymzk-jp/items/00ff664da60c37458aaa)
 - Markdown記法全般  
   [Markdown記法 サンプル集](https://qiita.com/tbpgr/items/989c6badefff69377da7)  
   [Markdown記法 チートシート](https://gist.github.com/mignonstyle/083c9e1651d7734f84c99b8cf49d57fa)  
@@ -53,9 +151,3 @@ Gitの利用方法
 
 <img src="https://user-images.githubusercontent.com/51372161/129022763-34be4463-dc02-4542-95df-57601609d4dc.png" width="320px">
 
-# その他
-## コマンドライン（Windows）
-テキストエディタの起動:  
-  `$ notepad ファイル名`  
-ファイル内容の表示:  
-  `$ type ファイル名`
