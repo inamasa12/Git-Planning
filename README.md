@@ -2,13 +2,12 @@
 
 ## Git操作
 
-- フォーク
+- フォーク  
 異なるアカウントのレポジトリをコピーする
 
 - クローン  
 リモートレポジトリをローカルにコピーする  
-`git clone repo_A(SSH)`:  
-リモートレポジトリrepo_Aをローカルに取得  
+`git clone repo_A(SSH)`: リモートレポジトリrepo_Aをローカルに取得  
 
 - アド
 変更をステージングエリアに登録する  
@@ -18,8 +17,7 @@
 
 - プッシュ  
 ローカルブランチをリモートにコピーする  
-`git push origin branch_A`:  
-ローカルのbranch_Aブランチをリモートレポジトリoriginにコピー  
+`git push origin branch_A`: ローカルのbranch_Aブランチをリモートレポジトリoriginにコピー  
 
 - プルリクエスト  
 ブランチのマージを目的に変更のレビューを依頼する  
@@ -31,14 +29,11 @@
 - フェッチ  
 リモートブランチの状態を記録する「リモート追跡ブランチ」を最新の状態に更新する  
 全てのブランチが対象  
-`git fetch origin`:  
-リモートレポジトリoriginに関する全てのリモート追跡ブランチを更新  
+`git fetch origin`: リモートレポジトリoriginに関する全てのリモート追跡ブランチを更新  
 
 - プル  
 フェッチとマージを続けて行い、ローカルブランチをリモートブランチと同じ状態にする  
-`git pull origin master`:  
-ローカルのmasterブランチをリモートレポジトリoriginのmasterブランチに同期  
-　※）処理の前に更新対象のブランチに移動しておく必要がある  
+`git pull origin master`: ローカルのmasterブランチをリモートレポジトリoriginのmasterブランチに同期（処理の前に更新対象のブランチに移動しておく必要がある）  
 
 - プルリクエスト  
 変更のレビューを依頼すること  
@@ -78,7 +73,7 @@ branch_Aを作成
 - git checkout -- file_A (git restore)  
 file_Aへのコミットを取り消す  
 本来的にはfile_Aをステージングの状態に戻す操作  
-- git reset HEAD file_A (git restore)
+- git reset HEAD file_A (git restore)  
 ステージングエリアへの登録を取り消す  
 本来的にはステージングエリアを最新のコミットの状態に戻す  
 
@@ -91,12 +86,12 @@ file_Aの変更をステージングエリアに登録
 - git commit -am "COMMENT"  
 ステージングとコミットを連続して行う  
 
-- git push origin branch_A
+- git push origin branch_A  
 ローカルブランチbranch_Aの変更をリモートに反映させる  
 
 - git rm file_A  
 file_Aファイルを削除して、変更をステージングエリアに登録（コミットはしない）  
-- git rm -r dir_A
+- git rm -r dir_A  
 dir_Aディレクトリを削除して、変更をステージングエリアに登録（コミットはしない）  
 
 - git merge branch_A  
