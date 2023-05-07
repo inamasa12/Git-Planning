@@ -112,7 +112,7 @@ dir_Aディレクトリを削除して、変更をステージングエリアに
     ③ 当該フォルダでレポジトリを設定  
     　　`git init`  
     ④ リモートレポジトリを紐づけ  
-    　　`git remote add repo_A(SSH)`  
+    　　`git remote add origin repo_A(SSH)`  
 1. ローカルでのファイル変更  
 1. 変更のステージング  
 　`git add file_A`
